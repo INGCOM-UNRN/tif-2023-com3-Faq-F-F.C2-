@@ -1,7 +1,7 @@
 import clasica as cla
 import fracciones as fra
 import conversiones as conv
-def la_calculadoreishon():
+def la_calculadora():
     inter = 0
     while inter != 1:
         try:
@@ -25,5 +25,4 @@ def la_calculadoreishon():
                 print("El valor ingresado no es valido")
         inter = 0    
     print("apagado")
-
-la_calculadoreishon()
+la_calculadora()

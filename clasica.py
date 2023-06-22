@@ -37,6 +37,8 @@ def cal_clasica():
                         inter = 1
                     except ValueError:
                         print("El valor ingresado no es valido")
+                    except ZeroDivisionError:
+                        print("Se ha intentado dividir por cero (0) vuelve a intentarlo")
                 inter = 0
             elif signo == "x" or "X":
                 while inter != 1:

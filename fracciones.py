@@ -10,47 +10,48 @@ def cal_fracciones():
                 while signo != "=":
                     if signo == "+":
                         try:
-                            num_2 = float(input("Ingrese otro numerador: "))
-                            den_2 = float(input("Ingrese otro denominador: "))
+                            num_2 = int(input("Ingrese otro numerador: "))
+                            den_2 = int(input("Ingrese otro denominador: "))
                             num_1 = (num_1*den_2) + (num_2*den_1)
                             den_1 = den_1 * den_2
                             signo = input("Ingrese el signo + - * / para operar seguir operando o '=' para terminar la operacion: ")
                         except ValueError:
-                            print("El valor ingresado no corresponde a un numero")
+                            print("El valor ingresado no corresponde a un numero o tiene decimales")
                     elif signo == "-":
                         try:
-                            num_2 = float(input("Ingrese otro numerador: "))
-                            den_2 = float(input("Ingrese otro denominador: "))
+                            num_2 = int(input("Ingrese otro numerador: "))
+                            den_2 = int(input("Ingrese otro denominador: "))
                             num_1 = (num_1*den_2) - (num_2*den_1)
                             den_1 = den_1 * den_2
                             signo = input("Ingrese el signo + - * / para operar seguir operando o '=' para terminar la operacion: ")
                         except ValueError:
-                            print("El valor ingresado no corresponde a un numero")
+                            print("El valor ingresado no corresponde a un numero o tiene decimales")
                     elif signo == "*":
                         try:
-                            num_2 = float(input("Ingrese otro numerador: "))
-                            den_2 = float(input("Ingrese otro denominador: "))
+                            num_2 = int(input("Ingrese otro numerador: "))
+                            den_2 = int(input("Ingrese otro denominador: "))
                             num_1 = num_1 * num_2
                             den_1 = den_1 * den_2
                             signo = input("Ingrese el signo + - * / para operar seguir operando o '=' para terminar la operacion: ")
                         except ValueError:
-                            print("El valor ingresado no corresponde a un numero")
+                            print("El valor ingresado no corresponde a un numero o tiene decimales")
                     elif signo == "/":
                         try:
-                            num_2 = float(input("Ingrese otro numerador: "))
-                            den_2 = float(input("Ingrese otro denominador: "))
+                            num_2 = int(input("Ingrese otro numerador: "))
+                            den_2 = int(input("Ingrese otro denominador: "))
                             num_1 = num_1 * den_2
                             den_1 = den_1 * num_2
                             signo = input("Ingrese el signo + - * / para operar seguir operando o '=' para terminar la operacion: ")
                         except ValueError:
-                            print("El valor ingresado no corresponde a un numero")
+                            print("El valor ingresado no corresponde a un numero o tiene decimales")
                     else:
                         print ("El simbolo ingresado no corresponde a uno solicitado")
+                        signo = input("Ingrese el signo + - * / para operar seguir operando o '=' para terminar la operacion: ")
                 contador = 2
                 while contador <= 10:
                     if num_1 % contador == 0 and den_1 % contador == 0:
-                        num_1 = num_1 / contador
-                        den_1 = den_1 / contador
+                        num_1 = num_1 // contador
+                        den_1 = den_1 // contador
                     else:
                         contador += 1
                 if den_1 == 0:

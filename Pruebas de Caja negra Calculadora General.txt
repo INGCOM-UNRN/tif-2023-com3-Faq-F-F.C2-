@@ -1,0 +1,75 @@
+"Prueba de caja negra: Menu"
+Valores limite: 1 a 4
+"Valores validos e invalidos": 
+  -"Clase valida": Menu = 1, 2 ,3, 4 
+  -"Clase invalida": Menu = Espacio en blanco, Numeros < 1 y Numeros > 4, Letras y simbolos. 
+--
+Pruebas: 
+(Menu = Clase invalida): El programa deberia de preguntar de nuevo y continuar operando sin problemas. 
+(Menu = 1): El programa procede a avanzar hacia la calculadora clasica y operar con normalidad. 
+(Menu = 2): El programa procede a avanzar hacia la calculadora de fracciones y operar con normalidad.
+(Menu = 3): El programa procede a avanzar hacia la calculadora conversiones y operar con normalidad. 
+(Menu = 4): El programa procede a cerrarse y dejar de operar.  
+
+
+"Pruebas de caja negra: Calculadora Clasica" 
+Valores limite: (-infinito y +infinito)
+"Valores validos e invalidos": 
+-"Clase valida": 
+  -Valor A o Valor B = Numeros (con decimales y sin decimales, positivos o negativos).
+  -"Simbolo": +,-,*,/, =.
+-"Clase invalida": 
+  -Valor A o Valor B = Espacio en blanco, Letras y simbolos. 
+  -"Simbolo": Numeros, Letras y simbolos (que no corresponda a los mencionados arriba), espacio en blanco.
+--
+Pruebas: 
+  -[Valor A("Valido") + Valor B("Valido")]: El programa deberia de sumar ambos valores y seguir operando. 
+  -[Valor A("Valido") - Valor B("Valido")]: El programa deberia de restar ambos valores y seguir operando. .
+  -[Valor A("Valido") * Valor B("Valido")]: El programa deberia de multiplicar ambos valores y seguir operando. 
+  -[Valor A("Valido") / Valor B("Valido")]: El programa deberia de dividir ambos valores y seguir operando. 
+  -[Valor A("Valido") (Signo = "Valido") Valor B("Invalida")]: El programa no deberia lograr operar y devolver un mensaje de error, y deberia de volver a colocar el segundo valor.  
+  -[Valor A("Valido") (Signo = "Invalido"): El programa no deberia lograr operar y devolver un mensaje de error, y deberia de volver a colocar el signo hasta que sea valido. 
+  -[Valor A("Invalido"): El programa no deberia lograr operar y devolver un mensaje de error, y deberia de volver a colocar el valor hasta que sea correcto.
+  -[Valor A("Valido") (Signo = "="): El programa deberia solo devolver el Valor A y terminar de operar.
+  -[Valor A("Valido") (Signo = "Valido") (Valor B("Valido") Signo = "="): El programa deberia de operar cualquier operacion, devolver el resultado y terminar de operar.
+
+
+"Pruebas de caja negra: Calculadora de Fracciones" 
+Valores limite: (-infinito y +infinito)
+"Valores validos e invalidos": 
+-"Clase valida": 
+  -Fraccion A o Fraccion B = Numeros(Sin decimales, positivos o negativos).
+  -"Simbolo": +,-,*,/, =.
+-"Clase invalida": 
+  -Fraccion A o Fraccion B = Espacio en blanco, Letras y simbolos, Numeros con decimales. 
+  -"Simbolo": Numeros, Letras y simbolos (que no corresponda a los mencionados arriba), espacio en blanco.
+--
+Pruebas:
+  -[Fraccion A("Valido") + Fraccion B("Valido")]: El programa deberia de sumar ambos valores y seguir operando. 
+  -[Fraccion A("Valido") - Fraccion B("Valido")]: El programa deberia de restar ambos valores y seguir operando.
+  -[Fraccion A("Valido") * Fraccion B("Valido")]: El programa deberia de multiplicar (Numerador A * Numerador B, Denominador A y Denominador B) y seguir operando. 
+  -[Fraccion A("Valido") / Fraccion B("Valido")]: El programa deberia de multiplicar ambos valores (Numerador de la Fraccion A y el denominador de la Fraccion B, Numerador de la Fraccion B y el denominador de la Fraccion A) y seguir operando. 
+  -[Fraccion A("Valido") (Signo = "Valido") Fraccion B("Invalida")]: El programa no deberia lograr operar y devolver un mensaje de error, y deberia de volver a colocar el segundo valor.  
+  -[Fraccion A("Valido") (Signo = "Invalido"): El programa no deberia lograr operar y devolver un mensaje de error, y deberia de volver a colocar el signo hasta que sea valido. 
+  -[Fraccion A("Invalido"): El programa no deberia lograr operar y devolver un mensaje de error, y deberia de volver a colocar el valor hasta que sea correcto. 
+  -[Fraccion A("Valido") (Signo = "="): El programa deberia solo devolver el Valor A y terminar de operar.
+  -[Fraccion A("Valido") (Signo = "Valido") (Fraccion  B("Valido") Signo = "="): El programa deberia de realizar cualquier operacion, devolver el resultado y terminar de operar.
+
+
+
+"Pruebas de caja negra: Calculadora de Conversiones"
+Valores limites: 0 y 9999
+Valor Fronteriso: -1 y 10000
+"Valores validos e invalidos": 
+-"Clase Valida":
+  -Boton de conversion = ("Bin", "Hex", "Oct").  
+  -Valor a convertir = (Numero sin decimales, positivo).
+-"Clase invalida": 
+  -Valor a convertir = (Numero con decimales, negativo, Letras y simbolos, espacios en blanco).
+--
+Pruebas: 
+-(Boton de conversion = "Bin"): El programa avanza a la opcion de convertir en "Binario", y devuelve el Valor convertido a Binario 
+-(Boton de conversion = "Hex"): El programa avanza a la opcion de convertir en "Hexadecimal", y devuelve el Valor convertido a Hexadecimal. 
+-(Boton de conversion = "Oct"): El programa avanza a la opcion de convertir en "Octal", y devuelve el Valor convertido a Octal. 
+-(Valor a convertir = Invalido): El programa deberia de tirar un error con respecto a dicho problema y deberia de volver a preguntar para seguir operando. 
+-(Valor a convertir = Valido): El programa deberia de avanzar y devolver el valor en su forma convertida segun lo especificado con respecto a "Boton de conversion".
