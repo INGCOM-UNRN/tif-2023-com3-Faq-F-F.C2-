@@ -9,7 +9,7 @@ def cal_clasica():
             except ValueError:
                 print("El valor ingresado no es valido")
         inter = 0
-        signo = input("ingrese la cuenta que quiere hacer (+, -, x, /): ")
+        signo = input("ingrese la cuenta que quiere hacer (+, -, *, /): ")
         while signo != "=":
             if signo == "+":
                 while inter != 1:
@@ -40,7 +40,7 @@ def cal_clasica():
                     except ZeroDivisionError:
                         print("Se ha intentado dividir por cero (0) vuelve a intentarlo")
                 inter = 0
-            elif signo == "x" or "X":
+            elif signo == "*":
                 while inter != 1:
                     try:
                         valor_2 = float(input("ingrese el otro valor: "))
