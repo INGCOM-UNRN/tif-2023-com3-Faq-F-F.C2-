@@ -60,5 +60,5 @@ def cal_fracciones():
                     print (f"Tu cuenta total es {num_1}/{den_1}")
                 flag = False
             except ValueError:
-                print("El valor ingresado no corresponde a un numero")
+                print("El valor ingresado no corresponde a un numero o tiene decimales")
             
